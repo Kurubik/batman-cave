@@ -3,4 +3,4 @@ dist
 app/bower_components
 app/bundles
 *.log
-.idea
+idea
