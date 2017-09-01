@@ -11,6 +11,11 @@
     "react-router"
   ],
   "main": "index.html",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "npm run build && NODE_ENV=production",
+    "test": "jest"
+  },
   "author": "@moklick <mo@webkid.io>",
   "license": "MIT",
   "devDependencies": {
