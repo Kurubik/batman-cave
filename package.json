@@ -12,6 +12,7 @@
   ],
   "main": "index.html",
   "scripts": {
+    "postinstall": "npm install",
     "start": "gulp clean && gulp",
     "test": "jest"
   },
