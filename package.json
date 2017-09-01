@@ -11,10 +11,6 @@
     "react-router"
   ],
   "main": "index.html",
-  "scripts": {
-    "start": "gulp clean && gulp",
-    "test": "jest"
-  },
   "author": "@moklick <mo@webkid.io>",
   "license": "MIT",
   "devDependencies": {
