@@ -1,7 +1,7 @@
 {
-  "name": "webkid-react-starterkit",
+  "name": "batman-cave",
   "version": "1.0.1",
-  "description": "Lightweight starting point for a react web app.",
+  "description": "React web app.",
   "keywords": [
     "react",
     "starterkit",
@@ -12,7 +12,6 @@
   ],
   "main": "index.html",
   "scripts": {
-    "postinstall": "npm install",
     "start": "gulp clean && gulp",
     "test": "jest"
   },
