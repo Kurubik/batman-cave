@@ -8,11 +8,11 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
+      { test:  /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
     ]
   },
   resolve: {
-    extensions: ['.js','.scss']
+    extensions: ['.js','.styl']
   },
   output: {
     path: path.join(__dirname, '/dist'),

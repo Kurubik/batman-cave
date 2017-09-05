@@ -1,7 +1,7 @@
 {
-  "name": "react-node-starter",
+  "name": "batman-cave",
   "version": "1.1.0",
-  "description": "an example for deploying a React + NodeJS app to Heroku",
+  "description": "Batman Cave",
   "main": "server.js",
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
@@ -25,6 +25,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "sass-loader": "^6.0.6",
+    "stylus-loader": "^3.0.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5"
   },
