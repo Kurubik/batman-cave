@@ -41,6 +41,7 @@
     "style-loader": "^0.18.2",
     "stylus-loader": "^3.0.1",
     "webpack": "^3.5.5",
+    "clean-webpack-plugin": "^0.1.15",
     "redux-form": "^6.4.3",
     "redux-saga": "^0.14.3"
   },
@@ -61,7 +62,6 @@
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.7.1",
     "webpack-hot-middleware": "^2.18.2",
-    "clean-webpack-plugin": "^0.1.15",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^4.3.0",
