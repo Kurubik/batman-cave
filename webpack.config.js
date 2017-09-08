@@ -1,16 +1,15 @@
-const webpack = require('webpack');
-const path = require('path');
-var devFlagPlugin = new webpack.DefinePlugin({
-    __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
-});
+var app_root = 'src';
+var path = require('path');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: [
-    './src/index'
+    'babel-polyfill',
+    __dirname + '/' + app_root + '/index.js',
   ],
   module: {
     loaders: [
-      { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.js?$/, loader: ['react-hot-loader', 'babel-loader'], exclude: /node_modules/ },
       { test:  /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
     ]
   },
@@ -18,19 +17,21 @@ module.exports = {
     extensions: ['.js','.styl']
   },
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: __dirname + '/dist',
     publicPath: '/',
     filename: 'bundle.js'
   },
   devtool: 'cheap-eval-source-map',
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
+    historyApiFallback: true,
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    devFlagPlugin
+    new CleanWebpackPlugin(['bundle.js'], {
+      root: __dirname + '/dist',
+      verbose: true,
+      dry: false, // true for simulation
+    }),
   ]
 };

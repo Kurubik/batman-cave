@@ -1,17 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
 import '../assets/stylesheets/base.styl';
 
 
-function App({ name }) {
-  return (
-    <h1>Hello, {name}!</h1>
-  );
-};
-
-App.propTypes = {
-  name: PropTypes.string,
-};
-
-export default App;
+// app component
+export default class App extends React.Component {
+    // render
+    render() {
+        return (
+            <div className="container">
+                {this.props.children}
+            </div>
+        );
+    }
+}
