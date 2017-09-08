@@ -69,6 +69,7 @@
     "redux-freeze": "^0.1.5",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
+    "stylus-loader": "^3.0.1",
     "webpack": "^1.14.0",
     "whatwg-fetch": "^2.0.1"
   }
