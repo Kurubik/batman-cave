@@ -8,6 +8,14 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
+app.post('/get-user-list', function(request, response) {
+    var collection = db.get().collection('cave-users');
+
+    collection.find().toArray(function(err, docs) {
+        response.send(docs);
+    });
+});
+
 app.get('*', function(request, response) {
   response.sendFile(__dirname + '/dist/index.html');
 });
