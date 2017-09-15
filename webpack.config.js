@@ -10,7 +10,8 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js?$/, loader: ['react-hot-loader', 'babel-loader'], exclude: /node_modules/ },
-      { test:  /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
+      { test: /\.styl$/, loaders: ['style-loader', 'css-loader', 'stylus-loader']},
+      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] }
     ]
   },
   resolve: {
