@@ -1,5 +1,6 @@
 import React from "react";
 import UserList from "./common/UserList";
+import UserEdit from "./common/UserEdit";
 
 // Home page component
 export default class Home extends React.Component {
@@ -7,8 +8,11 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="page-home">
-        <h4>Batman</h4>
-        <UserList />
+        <UserEdit />
+        <div className="wrapper">
+            <h4>Batman</h4>
+            <UserList />
+        </div>
       </div>
     );
   }

@@ -21,7 +21,7 @@ export function* usersAddEdit(action) {
 
   // update the state by adding/editing the user
   yield put({
-    type: action.user.id ? 'USERS_EDIT_SAVE' : 'USERS_ADD_SAVE',
+    type: action.user._id ? 'USERS_EDIT_SAVE' : 'USERS_ADD_SAVE',
     user: action.user,
   });
 

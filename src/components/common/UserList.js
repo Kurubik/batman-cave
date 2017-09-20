@@ -66,7 +66,7 @@ export class UserList extends React.Component {
   //   // delete the user
   //   this.props.dispatch({
   //     type: 'USERS_DELETE',
-  //     user_id: this.state.delete_user.id,
+  //     user_id: this.state.delete_user._id,
   //   });
   //
   //   // hide the prompt
